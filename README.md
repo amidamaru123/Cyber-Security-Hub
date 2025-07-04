@@ -1,102 +1,96 @@
-# Cyber-Security-Hub
-
 # Cyber Security Hub
 
-Интерактивно React приложение за практикуване на основни умения по кибер сигурност – сканиране на портове, оценка на силата на пароли и куиз с въпроси.
+An interactive React application to practice basic cybersecurity skills — port scanning, password strength checking, and a cybersecurity quiz.
 
-## Съдържание
+## Table of Contents
 
-* [Функционалности](#функционалности)
-* [Технологии](#технологии)
-* [Изисквания](#изисквания)
-* [Локално стартиране](#локално-стартиране)
-* [Деплой в Cloudflare Pages](#деплой-в-cloudflare-pages)
-* [Структура на проекта](#структура-на-проекта)
-* [Лиценз](#лиценз)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Requirements](#requirements)
+* [Local Setup](#local-setup)
+* [Deploy to Cloudflare Pages](#deploy-to-cloudflare-pages)
+* [Project Structure](#project-structure)
+* [License](#license)
 
-## Функционалности
+## Features
 
-* **Табло** с概要 въведение и навигация.
-* **Скенер на портове** (симулация) с графика от отворени/затворени портове.
-* **Проверка на пароли** – евристичен алгоритъм + визуален индикатор.
-* **Куиз** по кибер сигурност с обратна връзка и финален резултат.
-* Анимации с *Framer Motion*, красиви компоненти от *shadcn/ui* и икони от *lucide-react*.
+* **Dashboard** with an overview and navigation.
+* **Port Scanner** (simulation) with a chart of open/closed ports.
+* **Password Checker** — heuristic strength evaluation with visual feedback.
+* **Cybersecurity Quiz** with real-time feedback and scoring.
+* Animations via *Framer Motion*, stylish components from *shadcn/ui*, and icons via *lucide-react*.
 
-## Технологии
+## Technologies
 
-| Технология    | Роля                            |
-| ------------- | ------------------------------- |
-| React 18      | Front‑end библиотека            |
-| Vite          | Инструмент за разработка и билд |
-| Tailwind CSS  | Стайлинг                        |
-| shadcn/ui     | UI компоненти                   |
-| lucide-react  | SVG икони                       |
-| Framer Motion | Анимации                        |
-| Recharts      | Диаграми                        |
+| Technology    | Purpose              |
+| ------------- | -------------------- |
+| React 18      | Front-end library    |
+| Vite          | Dev/build tool       |
+| Tailwind CSS  | Styling              |
+| shadcn/ui     | UI components        |
+| lucide-react  | SVG icons            |
+| Framer Motion | Animations           |
+| Recharts      | Chart visualizations |
 
-> **Забележка**: Ако предпочиташ Create React App или Next.js, променените команди са отбелязани по‑долу.
+> **Note**: You can adapt this project to use Create React App or Next.js if preferred.
 
-## Изисквания
+## Requirements
 
 * **Node.js ≥ 18**
-* **pnpm** (препоръчително) или **npm** / **yarn**
+* **pnpm** (recommended), or **npm** / **yarn**
 
-## Локално стартиране
+## Local Setup
 
 ```bash
-# Клонирай репото
+# Clone the repository
 git clone https://github.com/<username>/<repo>.git
 cd <repo>
 
-# Инсталирай зависимостите
-pnpm install       # или npm install / yarn install
+# Install dependencies
+pnpm install       # or npm install / yarn install
 
-# Стартирай dev сървъра
-pnpm dev           # или npm run dev / yarn dev
+# Start the dev server
+pnpm dev           # or npm run dev / yarn dev
 
-# Отвори в браузър
-http://localhost:5173   # по подразбиране за Vite
+# Open in browser
+http://localhost:5173   # default for Vite
 ```
 
-### Билд за продукция
+### Production Build
 
 ```bash
-pnpm build    # генерира /dist директория
+pnpm build    # generates /dist folder
 
-# Преглед на билда (по желание)
-pnpm preview  # стартира локален сървър над dist/
+# Preview the build (optional)
+pnpm preview  # serves /dist locally
 ```
 
-## Деплой в Cloudflare Pages
+## Deploy to Cloudflare Pages
 
-1. Влез в **Cloudflare > Pages** и създай проект.
-2. Свържи се с GitHub и избери репото.
-3. Настройки:
+1. Go to **Cloudflare > Pages** and create a new project.
+2. Connect your GitHub account and select the repo.
+3. Configuration:
 
    * **Framework preset**: `Vite`
    * **Build command**: `pnpm build`
-     (или `npm run build` / `yarn build`)
+     (or `npm run build` / `yarn build`)
    * **Output directory**: `dist`
-4. Избери **Deploy**.
-   След \~1‑2 мин ще получиш URL: `https://<project>.pages.dev`.
-5. (По желание) Добави собствен домейн през **Pages > Custom domains**.
+4. Click **Deploy**.
+   In \~1–2 minutes, you’ll receive a public URL like: `https://<project>.pages.dev`
+5. (Optional) Add a custom domain in **Pages > Custom domains**.
 
-> Cloudflare ще ребилдва сайта при всеки push към `main` (или друга избрана) branch.
+> Cloudflare will rebuild the site automatically on each push to `main` (or another selected branch).
 
-## Структура на проекта (Vite)
+## Project Structure (Vite)
 
 ```
-├── public/                # статични файлове
+├── public/                # static files
 ├── src/
 │   ├── CyberSecuritySite.jsx
-│   ├── App.jsx           # или main.jsx, импорт на компонента
-│   ├── index.css         # Tailwind директиви
+│   ├── App.jsx           # or main.jsx, imports the main component
+│   ├── index.css         # Tailwind directives
 │   └── ...
 ├── tailwind.config.js
 ├── vite.config.js
 └── package.json
 ```
-
-## Лиценз
-
-
